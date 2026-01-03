@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanshu's Birthday 💙</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pochiy+Pop+One&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:#f2f7ff;overflow-x:hidden;}
+    .watermark{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Pochiy Pop One',cursive;font-size:10vw;color:#005bb5b3;opacity:.07;pointer-events:none;z-index:0;white-space:nowrap;}
+    .book{max-width:100%;margin:auto;padding-bottom:80px;position:relative;z-index:1;}
+
+    .cover, .page, .final{width:100%;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5vw;position:relative;background-color:#005bb5b3;background-size:cover;background-position:center;}
+    .cover *,.page *,.final *{position:relative;z-index:2}
+    .cover img.main{width:40vw;max-width:180px;animation:wave 3s ease-in-out infinite;}
+    @keyframes wave{0%{transform:rotate(0)}25%{transform:rotate(5deg)}50%{transform:rotate(0)}75%{transform:rotate(-5deg)}100%{transform:rotate(0)}}
+    .cover h1{font-family:'Pochiy Pop One',cursive;color:#fff;font-size:8vw;margin-top:3vw}
+    .cover p{color:#f0f8ff;margin-top:2vw;font-size:4vw}
+
+    .sticker{position:absolute;opacity:.52;width:20vw;max-width:120px;animation:float 6s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+    .s1{top:8%;left:5%}.s2{bottom:12%;right:8%}.s3{top:40%;right:10%}
+
+    .paper{position:relative;background:#1e90ff;border-radius:8vw;padding:5vw;text-align:center;transform:translateY(8vw) scale(.95);opacity:0;transition:all .9s ease;color:#fff;z-index:2;width:90%;max-width:400px;box-shadow:0 5vw 10vw rgba(0,0,0,.2);}
+    .paper.active{transform:none;opacity:1}
+    .paper h2{font-family:'Pochiy Pop One',cursive;color:#fff;font-size:6vw;margin-bottom:3vw}
+    .paper p{font-size:4vw;line-height:1.6;color:#f0f8ff}
+
+    .slideshow{width:80%;max-width:300px;height:auto;aspect-ratio:3/4;border-radius:4vw;overflow:hidden;box-shadow:0 3vw 6vw rgba(0,0,0,.3);position:relative;margin:auto;}
+    .slideshow img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 1s ease;}
+    .slideshow img.show{opacity:1;z-index:1;}
+    .caption{position:absolute;bottom:0;left:0;right:0;padding:2vw;font-size:4vw;color:#fff;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);text-align:center;}
+
+    .final h1{font-family:'Pochiy Pop One',cursive;font-size:8vw}
+    .final p{margin-top:2vw;font-size:4vw;line-height:1.6}
+
+    footer{text-align:center;font-size:3vw;color:#fff;padding:4vw;background-color:#1e90ff;}
+  </style>
+</head>
+<body>
+
+<div class="watermark">Vanshuuuuu</div>
+<div class="book">
+  <section class="cover">
+    <img class="sticker s1" src="Images/Snapchat-334274972.jpg">
+    <img class="sticker s2" src="Images/Snapchat-558306941.jpg">
+    <img class="sticker s3" src="Images/Snapchat-1659144801.jpg">
+    <img class="main" src="Images/IMG-20250814-WA0015.jpg" alt="Doraemon">
+    <h1>Happy Birthday </br> Vanshuuuuuuuuu💙</h1>
+    <p>Yeeeeeeeeeeeeeeeeeeee... ✨</p>
+    <audio id="bgMusic" loop>
+      <source src="Music/Mai_koi_aesa_geet_gau.mp3" type="audio/mpeg">
+    </audio>
+    <button id="musicBtn" style="
+      margin-top:4vw;
+      padding:3vw 6vw;
+      font-size:4vw;
+      border:none;
+      border-radius:50px;
+      background:#fff;
+      color:#1e90ff;
+      font-weight:600;
+      ">
+        ▶ Play Music
+  </button>
+  </section>
+
+  <section class="page">
+    <div class="paper">
+      <h2>Dear Vanshu 🌸</h2>
+      <p>You are my comfort, my happiness, and one of the most beautiful parts of my life, and you are the best person i ever met in my life 🫣🥹🫶🏻
+,aur bs aap khus rahe muskurate rahe 😄🤭...aur aane vale saal aapke jivan me khusiyon ki bahar aaye yehi meri wish hai...🙇🏻🤌🏻, and i would like to thank you for being my unpaid therapist🥹🫶🏻, and also thank you for being with me laduuuuuuuuuuuuuuuuuuuu......💝🫶🏻✨, i'm always with you when you want just remember me in your mind that I am with you.🤌🏻✨💙</p>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="paper">
+      <h2>Your Day 🎂</h2>
+      <p>May your life be filled with love, smiles, surprises, and endless happiness ✨</p>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="paper">
+      <h2>Our Memories 📸</h2>
+      <div class="slideshow" id="slideshow">
+        <img src="Images/Snapchat-539365177.jpg" class="show">
+        <img src="Images/Snapchat-1683195967.jpg">
+        <img src="Images/Snapchat-1683195967.jpg">
+        <img src="Images/Snapchat-1659144801.jpg">
+        <!-- <video src="Snapchat-2094277510.mp4" muted loop></video> -->
+        <img src="Images/Snapchat-1911999913.jpg">
+      </div>
+      <div class="caption" id="caption">Smiles 💖</div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div>
+      <h1>🎉 Happy Birthday My Laduuuuuuuuuuu 🎉</h1>
+      <p>You’ll always be special to me 💙<br>— From Your Best Friend<br>Mituuuuuuuuuuuuuuu</p>
+    </div>
+  </section>
+
+  <!-- <footer>Made with 💙 & Doraemon magic</footer> -->
+</div>
+
+<script>
+  const papers=document.querySelectorAll('.paper');
+  window.addEventListener('scroll',()=>{
+    papers.forEach(p=>{if(p.getBoundingClientRect().top<window.innerHeight-100){p.classList.add('active')}});
+  });
+
+  const music = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicBtn');
+
+  musicBtn.addEventListener('click', () => {
+    music.play();
+      musicBtn.style.display = 'none';
+    });
+
+  const slides = document.querySelectorAll('#slideshow img');
+  const captions = ['Smiles 💖','Laughs ✨', 'Laduuuu 💖','Forever 💙'];
+  const captionEl = document.getElementById('caption');
+  let current = 0;
+
+  function showSlide(index){
+    slides.forEach(s => s.classList.remove('show'));
+    slides[index].classList.add('show');
+    captionEl.textContent = captions[index];
+  }
+
+  showSlide(current);
+  setInterval(()=>{
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  },3000);
+  
+</script>
+
+</body>
+</html>
